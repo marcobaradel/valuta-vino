@@ -1,0 +1,7 @@
+{
+  "name": "valuta-vino",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
