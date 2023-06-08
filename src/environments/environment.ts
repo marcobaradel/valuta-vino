@@ -6,6 +6,11 @@ export const environment = {
   production: false
 };
 
+export const URL_JSON_DB = {
+  USERS : "http://localhost:3000/users",
+  EVALUATIONS : "http://localhost:3000/evaluations",
+};
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

@@ -1,0 +1,173 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "name": "Marco",
+            "email": "marco.baradel2001@libero.it"
+        },
+        {
+            "id": 1,
+            "name": "Giulia",
+            "email": "giulia.rossi@gmail.com"
+        },
+        {
+            "id": 2,
+            "name": "Luca",
+            "email": "luca.bianchi@hotmail.com"
+        },
+        {
+            "id": 3,
+            "name": "Sara",
+            "email": "sara.verdi@yahoo.com"
+        },
+        {
+            "id": 4,
+            "name": "Alessio",
+            "email": "alessio.ferrari@gmail.com"
+        }
+    ],
+    "evaluations": [
+        {
+          "id": 0,
+          "wine_name": "Raboso",
+          "value": 74,
+          "wine_category": "Rosso da tavola",
+          "cellar": "Cantina Viticoltore Ponte",
+          "volume": 12,
+          "year": 2014,
+          "images": [
+            {"src": "https://ionicframework.com/docs/img/demos/thumbnail.svg"},
+            {"src": "https://ionicframework.com/docs/img/demos/avatar.svg"}
+          ],
+          "properties": {
+            "visually": {
+              "clarity": "limpido",
+              "color": "rosso rubino",
+              "consistency": "fluido",
+              "effervescence": {
+                "bubble-grain": "",
+                "bubbles-number": "",
+                "bubbles-persistence": ""
+              }
+            },
+            "olfactory": {
+              "intensity": "intenso",
+              "complexity": "abbastanza complesso",
+              "quality": "abbastanza fine",
+              "description": "fragrante"
+            },
+            "taste-olfactory": {
+              "softness": {
+                "sugars": "abboccato",
+                "alcohols": "poco caldo",
+                "polyalcohols": "poco morbido"
+              },
+              "hardness": {
+                "acids": "acidulo",
+                "tannins": "tannico",
+                "mineral-substances": "poco sapido"
+              },
+              "equilibrium": "equilibrato",
+              "intensity": "intenso",
+              "persistence": "poco persistente",
+              "quality": "abbastanza fine",
+              "structure": "di corpo"
+            }
+          }
+        },
+        {
+          "id": 1,
+          "wine_name": "Chardonnay",
+          "value": 88,
+          "wine_category": "Bianco secco",
+          "cellar": "Cantina Zonin",
+          "volume": 11.5,
+          "year": 2018,
+          "images": [],
+          "properties": {
+            "visually": {
+              "clarity": "limpido",
+              "color": "giallo dorato",
+              "consistency": "denso",
+              "effervescence": {
+                "bubble-grain": "fine",
+                "bubbles-number": "moderato",
+                "bubbles-persistence": "persistente"
+              }
+            },
+            "olfactory": {
+              "intensity": "intenso",
+              "complexity": "complesso",
+              "quality": "fine",
+              "description": "fruttato"
+            },
+            "taste-olfactory": {
+              "softness": {
+                "sugars": "secco",
+                "alcohols": "equilibrato",
+                "polyalcohols": "setoso"
+              },
+              "hardness": {
+                "acids": "vivace",
+                "tannins": "assenti",
+                "mineral-substances": "sapidità moderata"
+              },
+              "equilibrium": "equilibrato",
+              "intensity": "persistente",
+              "persistence": "lunga persistenza",
+              "quality": "fine",
+              "structure": "corposo"
+            }
+          }
+        },
+        {
+          "id": 2,
+          "wine_name": "Barolo",
+          "value": 95,
+          "wine_category": "Rosso secco",
+          "cellar": "Azienda Agricola Ceretto",
+          "volume": 14,
+          "year": 2012,
+          "images": [
+            {"src": "https://example.com/wine2.jpg"},
+            {"src": "https://example.com/wine2-thumb.jpg"}
+          ],
+          "properties": {
+            "visually": {
+              "clarity": "limpido",
+              "color": "rosso granato",
+              "consistency": "denso",
+              "effervescence": {
+                "bubble-grain": "",
+                "bubbles-number": "",
+                "bubbles-persistence": ""
+              }
+            },
+            "olfactory": {
+              "intensity": "intenso",
+              "complexity": "molto complesso",
+              "quality": "elevata",
+              "description": "speziato"
+            },
+            "taste-olfactory": {
+              "softness": {
+                "sugars": "secco",
+                "alcohols": "caldo",
+                "polyalcohols": "vigoroso"
+              },
+              "hardness": {
+                "acids": "vivace",
+                "tannins": "tannico",
+                "mineral-substances": "sapido"
+              },
+              "equilibrium": "equilibrato",
+              "intensity": "intenso",
+              "persistence": "persistente",
+              "quality": "elevata",
+              "structure": "di corpo"
+            }
+          }
+        }
+      ]
+      
+}

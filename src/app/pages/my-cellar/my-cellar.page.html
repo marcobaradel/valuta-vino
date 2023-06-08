@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="secondary" (click)="goBackToHome()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>La mia cantina</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="evaluations">
+  <ion-list>
+    <ng-container *ngFor="let item of evaluations">
+      <ion-item button class="wine-item" *ngIf="item.images && item.images.length > 0; else elseTemplate" (click)="goToDetail(item.id)">
+        <ion-thumbnail slot="start">
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+        </ion-thumbnail>
+        <ion-label *ngIf="item.wine_name"> {{item.wine_name}} </ion-label>
+        <ion-label class="rating ion-text-end">{{item.value}}/100</ion-label>
+      </ion-item>
+      <ng-template #elseTemplate>
+        <ion-item button class="wine-item" (click)="goToDetail(item.id)">
+          <ion-label *ngIf="item.wine_name"> {{item.wine_name}} </ion-label>
+          <ion-label class="rating ion-text-end">{{item.value}}/100</ion-label>
+        </ion-item>
+      </ng-template>
+    </ng-container>
+  </ion-list>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="goToNewEvaluations()">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

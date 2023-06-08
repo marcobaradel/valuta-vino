@@ -1,0 +1,13 @@
+.wine-item{
+    min-height: 60px;
+    // display: flex;
+    // align-items: center;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.rating{
+    grid-column-start: 2;
+    margin-left: auto;
+    font-size: x-small;
+}

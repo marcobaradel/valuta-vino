@@ -18,7 +18,7 @@ export class HomePage {
     this.router.navigateByUrl('my-cellar');
   }
 
-  goToNewWine(){
-    //this.router.navigateByUrl('new-wine');
+  goToNewEvaluations(){
+    this.router.navigateByUrl('new-evaluations');
   }
 }

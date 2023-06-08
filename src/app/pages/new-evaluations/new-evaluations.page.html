@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="secondary" (click)="goBackToCellar()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Nuova valutazione</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-accordion-group>
+    <ion-accordion value="visually">
+      <ion-item slot="header" color="light">
+        <ion-label>Esame visivo</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ng-container [ngComponentOutlet]="visuallyForm"></ng-container>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="olfactory">
+      <ion-item slot="header" color="light">
+        <ion-label>Esame olfattivo</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ng-container [ngComponentOutlet]="olfactoryForm"></ng-container>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="taste-olfactory">
+      <ion-item slot="header" color="light">
+        <ion-label>Esame gusto-olfattivo</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Componente</div>
+    </ion-accordion>
+    <ion-accordion value="final-consideration">
+      <ion-item slot="header" color="light">
+        <ion-label>Considerazioni finali</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Componente</div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
