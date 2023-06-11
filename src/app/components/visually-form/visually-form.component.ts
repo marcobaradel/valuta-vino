@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-
+import { FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-visually-form',
   templateUrl: './visually-form.component.html',
@@ -9,8 +9,11 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule]
 })
 export class VisuallyFormComponent  implements OnInit {
+  visuallyFormControl: FormControl;
 
-  constructor() { }
+  constructor() {
+    this.visuallyFormControl = new FormControl('', Validators.required);
+  }
 
   ngOnInit() {}
 

@@ -31,13 +31,23 @@
       <ion-item slot="header" color="light">
         <ion-label>Esame gusto-olfattivo</ion-label>
       </ion-item>
-      <div class="ion-padding" slot="content">Componente</div>
+      <div slot="content">
+        <ng-container [ngComponentOutlet]="tasteOlfactoryForm"></ng-container>
+      </div>
     </ion-accordion>
     <ion-accordion value="final-consideration">
       <ion-item slot="header" color="light">
         <ion-label>Considerazioni finali</ion-label>
       </ion-item>
-      <div class="ion-padding" slot="content">Componente</div>
+      <div slot="content">
+        <ng-container [ngComponentOutlet]="finalConsiderationForm"></ng-container>
+      </div>
     </ion-accordion>
   </ion-accordion-group>
+  <div class="next-container ion-padding">
+    <ion-button type="submit" style="width: 45%;">
+      Avanti
+      <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+    </ion-button>
+  </div>
 </ion-content>
