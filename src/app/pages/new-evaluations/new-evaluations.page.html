@@ -16,7 +16,7 @@
         <ion-label>Esame visivo</ion-label>
       </ion-item>
       <div slot="content">
-        <ng-container [ngComponentOutlet]="visuallyFormComponent"></ng-container>
+        <app-visually-form></app-visually-form>
       </div>
     </ion-accordion>
     <ion-accordion value="olfactory">
@@ -24,7 +24,7 @@
         <ion-label>Esame olfattivo</ion-label>
       </ion-item>
       <div slot="content">
-        <ng-container [ngComponentOutlet]="olfactoryFormComponent"></ng-container>
+        <app-olfactory-form></app-olfactory-form>
       </div>
     </ion-accordion>
     <ion-accordion value="taste-olfactory">
@@ -32,20 +32,20 @@
         <ion-label>Esame gusto-olfattivo</ion-label>
       </ion-item>
       <div slot="content">
-        <ng-container [ngComponentOutlet]="tasteOlfactoryFormComponent"></ng-container>
+        <app-taste-olfactory-form></app-taste-olfactory-form>
       </div>
     </ion-accordion>
     <ion-accordion value="final-consideration">
       <ion-item slot="header" color="light">
         <ion-label>Considerazioni finali</ion-label>
       </ion-item>
-      <div slot="content" *ngIf="finalConsiderationFormComponent">
-        <ng-container [ngComponentOutlet]="finalConsiderationFormComponent"></ng-container>
+      <div slot="content">
+        <app-final-consideration-form></app-final-consideration-form>
       </div>
     </ion-accordion>
   </ion-accordion-group>
   <div class="next-container ion-padding">
-    <ion-button type="submit" style="width: 45%;">
+    <ion-button style="width: 45%;" (click)="submitData()">
       Avanti
       <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
     </ion-button>
