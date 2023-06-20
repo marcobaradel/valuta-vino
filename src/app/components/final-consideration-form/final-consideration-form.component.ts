@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-final-consideration-form',
@@ -10,7 +11,19 @@ import { IonicModule } from '@ionic/angular';
 })
 export class FinalConsiderationFormComponent  implements OnInit {
 
-  constructor() { }
+  validationForm: FormGroup;
+
+  // constructor() {
+  //   this.validationForm = new FormControl();
+  // }
+
+  constructor() {
+    this.validationForm = new FormGroup({
+      statoEvolutivo: new FormControl('', Validators.required),
+      armonia: new FormControl('', Validators.required),
+      abbinamento: new FormControl('', Validators.required)
+    });
+  }
 
   ngOnInit() {}
 

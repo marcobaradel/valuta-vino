@@ -16,7 +16,7 @@
         <ion-label>Esame visivo</ion-label>
       </ion-item>
       <div slot="content">
-        <ng-container [ngComponentOutlet]="visuallyForm"></ng-container>
+        <ng-container [ngComponentOutlet]="visuallyFormComponent"></ng-container>
       </div>
     </ion-accordion>
     <ion-accordion value="olfactory">
@@ -24,7 +24,7 @@
         <ion-label>Esame olfattivo</ion-label>
       </ion-item>
       <div slot="content">
-        <ng-container [ngComponentOutlet]="olfactoryForm"></ng-container>
+        <ng-container [ngComponentOutlet]="olfactoryFormComponent"></ng-container>
       </div>
     </ion-accordion>
     <ion-accordion value="taste-olfactory">
@@ -32,15 +32,15 @@
         <ion-label>Esame gusto-olfattivo</ion-label>
       </ion-item>
       <div slot="content">
-        <ng-container [ngComponentOutlet]="tasteOlfactoryForm"></ng-container>
+        <ng-container [ngComponentOutlet]="tasteOlfactoryFormComponent"></ng-container>
       </div>
     </ion-accordion>
     <ion-accordion value="final-consideration">
       <ion-item slot="header" color="light">
         <ion-label>Considerazioni finali</ion-label>
       </ion-item>
-      <div slot="content">
-        <ng-container [ngComponentOutlet]="finalConsiderationForm"></ng-container>
+      <div slot="content" *ngIf="finalConsiderationFormComponent">
+        <ng-container [ngComponentOutlet]="finalConsiderationFormComponent"></ng-container>
       </div>
     </ion-accordion>
   </ion-accordion-group>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
@@ -17,18 +17,36 @@ import { ValidationService } from 'src/app/validation.service';
   imports: [IonicModule, CommonModule, FormsModule],
 })
 export class NewEvaluationsPage implements OnInit {
+  @ViewChild(VisuallyFormComponent, { static: false }) visuallyFormComponent?: VisuallyFormComponent;
+  @ViewChild(OlfactoryFormComponent, { static: false }) olfactoryFormComponent?: OlfactoryFormComponent;
+  @ViewChild(TasteOlfactoryFormComponent, { static: false }) tasteOlfactoryFormComponent?: TasteOlfactoryFormComponent;
+  @ViewChild(FinalConsiderationFormComponent, { static: false }) finalConsiderationFormComponent?: FinalConsiderationFormComponent;
+
 
   constructor(
-    private router: Router,
-    private validationService: ValidationService
+    private router: Router
   ) { }
 
-  //Capire come usare validationService
+  // protected olfactoryForm = OlfactoryFormComponent;
+  // protected visuallyForm = VisuallyFormComponent;
+  // protected tasteOlfactoryForm = TasteOlfactoryFormComponent;
+  // protected finalConsiderationForm = FinalConsiderationFormComponent;
 
-  protected olfactoryForm = OlfactoryFormComponent;
-  protected visuallyForm = VisuallyFormComponent;
-  protected tasteOlfactoryForm = TasteOlfactoryFormComponent;
-  protected finalConsiderationForm = FinalConsiderationFormComponent;
+  submitForm(){
+    const visuallyFormValid = this.visuallyFormComponent?.validationForm.valid;
+    const olfactoryFormValid = this.olfactoryFormComponent?.validationForm.valid;
+    const tasteOlfactoryFormValid = this.tasteOlfactoryFormComponent?.validationForm.valid;
+    const finalConsiderationFormValid = this.finalConsiderationFormComponent?.validationForm.valid;
+
+    if (visuallyFormValid && olfactoryFormValid && tasteOlfactoryFormValid && finalConsiderationFormValid) {
+      // Tutti i campi del form sono validi, esegui azioni di submit
+      console.log('valido');
+    } else {
+      // Almeno uno dei campi del form non è valido
+      console.log('non valido');
+    }
+  }
+
   
   ngOnInit() {
   }
