@@ -9,8 +9,8 @@ export class ValidationService {
   constructor() { }
 
   validateFormGroup(formGroup: FormGroup): boolean {
-    //Validazione non funzionante: sempre validi o invalidi (vedi ts componenti)
     console.log(formGroup)
+    
     if (formGroup.valid) {
       console.log('Form is valid!');
       // Puoi eseguire le azioni desiderate quando il form è valido

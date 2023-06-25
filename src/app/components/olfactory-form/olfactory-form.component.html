@@ -1,5 +1,5 @@
 <ion-item>
-  <ion-select formControlName="intensita" label="Intensità" label-placement="fixed" placeholder="Intensità">
+  <ion-select formControlName="intensita" label="Intensità" label-placement="fixed" placeholder="Intensità" (ionChange)="setIntensitaValue($event)">
     <ion-select-option value="carente">Carente</ion-select-option>
     <ion-select-option value="poco intenso">Poco intenso</ion-select-option>
     <ion-select-option value="abbastanza intenso">Abbastanza intenso</ion-select-option>
@@ -8,7 +8,7 @@
   </ion-select>
 </ion-item>
 <ion-item>
-  <ion-select formControlName="complessita" label="Complessità" label-placement="fixed" placeholder="Complessità">
+  <ion-select formControlName="complessita" label="Complessità" label-placement="fixed" placeholder="Complessità" (ionChange)="setComplessitaValue($event)">
     <ion-select-option value="carente">Carente</ion-select-option>
     <ion-select-option value="poco complesso">Poco complesso</ion-select-option>
     <ion-select-option value="abbastanza complesso">Abbastanza complesso</ion-select-option>
@@ -17,7 +17,7 @@
   </ion-select>
 </ion-item>
 <ion-item>
-  <ion-select formControlName="qualita" label="Qualità" label-placement="fixed" placeholder="Qualità">
+  <ion-select formControlName="qualita" label="Qualità" label-placement="fixed" placeholder="Qualità" (ionChange)="setQualitaValue($event)">
     <ion-select-option value="comune">Comune</ion-select-option>
     <ion-select-option value="poco fine">Poco fine</ion-select-option>
     <ion-select-option value="abbastanza fine">Abbastanza fine</ion-select-option>
@@ -26,7 +26,7 @@
   </ion-select>
 </ion-item>
 <ion-item>
-  <ion-select formControlName="descrizione" label="Descrizione" label-placement="fixed" placeholder="Descrizione" [multiple]="true">
+  <ion-select formControlName="descrizione" label="Descrizione" label-placement="fixed" placeholder="Descrizione" [multiple]="true" (ionChange)="setDescrizioneValue($event)">
     <ion-select-option value="aromatico">Aromatico</ion-select-option>
     <ion-select-option value="vinoso">Vinoso</ion-select-option>
     <ion-select-option value="floreale">Floreale</ion-select-option>
@@ -40,5 +40,5 @@
   </ion-select>
 </ion-item>
 <ion-item>
-  <ion-textarea formControlName="osservazioni" label="Osservazioni" labelPlacement="floating"></ion-textarea>
+  <ion-textarea formControlName="osservazioni" label="Osservazioni" labelPlacement="floating" (ionChange)="setOsservazioniValue($event)"></ion-textarea>
 </ion-item>

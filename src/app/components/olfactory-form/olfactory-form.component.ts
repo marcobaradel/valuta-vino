@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -10,20 +10,44 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   imports: [IonicModule]
 })
 export class OlfactoryFormComponent  implements OnInit {
-  @Output() intensitaChange: EventEmitter<string> = new EventEmitter<string>();
   
   validationForm: FormGroup;
 
   constructor() {
     this.validationForm = new FormGroup ({
-      intensita: new FormControl(Validators.required),
-      complessita: new FormControl(Validators.required),
-      qualita: new FormControl(Validators.required),
-      descrizione: new FormControl(Validators.required),
-      osservazioni: new FormControl(Validators.required),
+      intensita: new FormControl(null, Validators.required),
+      complessita: new FormControl(null, Validators.required),
+      qualita: new FormControl(null, Validators.required),
+      descrizione: new FormControl(null, Validators.required),
+      osservazioni: new FormControl(null, Validators.required),
     });
   }
 
   ngOnInit() {}
+
+  // Metodo per impostare il valore del campo intensita
+  setIntensitaValue($event: any) {
+    this.validationForm.get('intensita')?.setValue($event.detail.value);
+  }
+
+  // Metodo per impostare il valore del campo complessita
+  setComplessitaValue($event: any) {
+    this.validationForm.get('complessita')?.setValue($event.detail.value);
+  }
+
+  // Metodo per impostare il valore del campo qualita
+  setQualitaValue($event: any) {
+    this.validationForm.get('qualita')?.setValue($event.detail.value);
+  }
+
+  // Metodo per impostare il valore del campo descrizione
+  setDescrizioneValue($event: any) {
+    this.validationForm.get('descrizione')?.setValue($event.detail.value);
+  }
+
+  // Metodo per impostare il valore del campo osservazioni
+  setOsservazioniValue($event: any) {
+    this.validationForm.get('osservazioni')?.setValue($event.detail.value);
+  }
 
 }

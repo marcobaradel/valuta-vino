@@ -1,5 +1,5 @@
 <ion-item>
-  <ion-select formControlName="limpidezza" label="Limpidezza" label-placement="fixed" placeholder="Limpidezza">
+  <ion-select formControlName="limpidezza" label="Limpidezza" label-placement="fixed" placeholder="Limpidezza" (ionChange)="setLimpidezzaValue($event)">
     <ion-select-option value="velato">Velato</ion-select-option>
     <ion-select-option value="abbastanza limpido">Abbastanza limpido</ion-select-option>
     <ion-select-option value="limpido">Limpido</ion-select-option>
@@ -8,7 +8,7 @@
   </ion-select>
 </ion-item>
 <ion-item>
-  <ion-select formControlName="colore" class="color-select" label="Colore" label-placement="fixed" placeholder="Colore">
+  <ion-select formControlName="colore" class="color-select" label="Colore" label-placement="fixed" placeholder="Colore" (ionChange)="setColoreValue($event)">
     <!-- GIALLO -->
     <ion-select-option disabled>Giallo</ion-select-option>
     <ion-select-option value="giallo verdolino">Giallo verdolino</ion-select-option>
@@ -29,7 +29,7 @@
   </ion-select>
 </ion-item>
 <ion-item>
-  <ion-select formControlName="consistenza" label="Consistenza" label-placement="fixed" placeholder="Consistenza">
+  <ion-select formControlName="consistenza" label="Consistenza" label-placement="fixed" placeholder="Consistenza" (ionChange)="setConsistenzaValue($event)">
     <ion-select-option value="fluido">Fluido</ion-select-option>
     <ion-select-option value="poco consistente">Poco consistente</ion-select-option>
     <ion-select-option value="consistente">Consistente</ion-select-option>
@@ -41,7 +41,7 @@
 </ion-item>
 <ion-item>
   <ion-label>Grana bollicine</ion-label>
-  <ion-select formControlName="granaB" placeholder="Grana bollicine">
+  <ion-select formControlName="granaB" placeholder="Grana bollicine" (ionChange)="setGranaBValue($event)">
     <ion-select-option value="grossolane">Grossolane</ion-select-option>
     <ion-select-option value="abbastanza fini">Abbastanza fini</ion-select-option>
     <ion-select-option value="fini">Fini</ion-select-option>
@@ -49,7 +49,7 @@
 </ion-item>
 <ion-item>
   <ion-label>Numero bollicine</ion-label>
-  <ion-select formControlName="numB" placeholder="Numero bollicine">
+  <ion-select formControlName="numB" placeholder="Numero bollicine" (ionChange)="setNumBValue($event)">
     <ion-select-option value="scarse">Scarse</ion-select-option>
     <ion-select-option value="abbastanza numerose">Abbastanza numerose</ion-select-option>
     <ion-select-option value="numerose">Numerose</ion-select-option>
@@ -57,12 +57,12 @@
 </ion-item>
 <ion-item>
   <ion-label>Persistenza bollicine</ion-label>
-  <ion-select formControlName="persistB" placeholder="Persistenza bollicine">
+  <ion-select formControlName="persistB" placeholder="Persistenza bollicine" (ionChange)="setPersistBValue($event)">
     <ion-select-option value="evanescenti">Evanescenti</ion-select-option>
     <ion-select-option value="abbastanza persistenti">Abbastanza persistenti</ion-select-option>
     <ion-select-option value="persistenti">Persistenti</ion-select-option>
   </ion-select>
 </ion-item>
 <ion-item>
-  <ion-textarea formControlName="osservazioni" label="Osservazioni" labelPlacement="floating"></ion-textarea>
+  <ion-textarea formControlName="osservazioni" label="Osservazioni" labelPlacement="floating" (ionChange)="setOsservazioniValue($event)"></ion-textarea>
 </ion-item>

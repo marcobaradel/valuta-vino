@@ -16,16 +16,44 @@ export class VisuallyFormComponent  implements OnInit {
   
   constructor() {
     this.validationForm = new FormGroup ({
-      limpidezza: new FormControl(Validators.required),
-      colore: new FormControl(Validators.required),
-      consistenza: new FormControl(Validators.required),
-      granaB: new FormControl(Validators.required),
-      numB: new FormControl(Validators.required),
-      persistB: new FormControl(Validators.required),
-      osservazioni: new FormControl(Validators.required),
+      limpidezza: new FormControl(null, Validators.required),
+      colore: new FormControl(null, Validators.required),
+      consistenza: new FormControl(null, Validators.required),
+      granaB: new FormControl(null, Validators.required),
+      numB: new FormControl(null, Validators.required),
+      persistB: new FormControl(null, Validators.required),
+      osservazioni: new FormControl(null, Validators.required),
     });
   }
 
   ngOnInit() {}
+
+  setLimpidezzaValue($event: any) {
+    this.validationForm.get('limpidezza')?.setValue($event.detail.value);
+  }
+
+  setColoreValue($event: any) {
+    this.validationForm.get('colore')?.setValue($event.detail.value);
+  }
+
+  setConsistenzaValue($event: any) {
+    this.validationForm.get('consistenza')?.setValue($event.detail.value);
+  }
+
+  setGranaBValue($event: any) {
+    this.validationForm.get('granaB')?.setValue($event.detail.value);
+  }
+
+  setNumBValue($event: any) {
+    this.validationForm.get('numB')?.setValue($event.detail.value);
+  }
+
+  setPersistBValue($event: any) {
+    this.validationForm.get('persistB')?.setValue($event.detail.value);
+  }
+
+  setOsservazioniValue($event: any) {
+    this.validationForm.get('osservazioni')?.setValue($event.detail.value);
+  }
 
 }

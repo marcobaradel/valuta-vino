@@ -15,12 +15,23 @@ export class FinalConsiderationFormComponent  implements OnInit {
 
   constructor() {
     this.validationForm = new FormGroup({
-      statoEvolutivo: new FormControl('', Validators.required),
-      armonia: new FormControl('', Validators.required),
-      abbinamento: new FormControl('', Validators.required)
+      statoEvolutivo: new FormControl(null, Validators.required),
+      armonia: new FormControl(null, Validators.required),
+      abbinamento: new FormControl(null, Validators.required)
     });
   }
 
   ngOnInit() {}
 
+  setStatoEvolutivoValue($event: any) {
+    this.validationForm.get('statoEvolutivo')?.setValue($event.detail.value);
+  }
+
+  setArmoniaValue($event: any) {
+    this.validationForm.get('armonia')?.setValue($event.detail.value);
+  }
+  
+  setAbbinamentoValue($event: any) {
+    this.validationForm.get('abbinamento')?.setValue($event.detail.value);
+  }
 }

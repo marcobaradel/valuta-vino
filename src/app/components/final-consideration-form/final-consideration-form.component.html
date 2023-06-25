@@ -1,6 +1,6 @@
 <ion-item>
   <ion-label>Stato evolutivo</ion-label>
-  <ion-select formControlName="statoEvolutivo" placeholder="Stato evolutivo">
+  <ion-select formControlName="statoEvolutivo" placeholder="Stato evolutivo" (ionChange)="setStatoEvolutivoValue($event)">
     <ion-select-option value="immaturo">Immaturo</ion-select-option>
     <ion-select-option value="giovane">Giovane</ion-select-option>
     <ion-select-option value="pronto">Pronto</ion-select-option>
@@ -9,12 +9,12 @@
   </ion-select>
 </ion-item>
 <ion-item>
-  <ion-select formControlName="armonia" label="Armonia" label-placement="fixed" placeholder="Armonia">
+  <ion-select formControlName="armonia" label="Armonia" label-placement="fixed" placeholder="Armonia" (ionChange)="setArmoniaValue($event)">
     <ion-select-option value="immaturo">Poco armonico</ion-select-option>
     <ion-select-option value="giovane">Abbastanza armonico</ion-select-option>
     <ion-select-option value="pronto">Armonico</ion-select-option>
   </ion-select>
 </ion-item>
 <ion-item>
-  <ion-input formControlName="abbinamento" label="Abbinamento" labelPlacement="floating"></ion-input>
+  <ion-input formControlName="abbinamento" label="Abbinamento" labelPlacement="floating" (ionChange)="setAbbinamentoValue($event)"></ion-input>
 </ion-item>

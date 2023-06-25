@@ -24,8 +24,8 @@ import { ValidationService } from 'src/app/validation.service';
 })
 export class NewEvaluationsPage implements OnInit {
 
-  @ViewChild(OlfactoryFormComponent, { static: false }) olfactoryFormComponent!: OlfactoryFormComponent;
   @ViewChild(VisuallyFormComponent, { static: false }) visuallyFormComponent!: VisuallyFormComponent;
+  @ViewChild(OlfactoryFormComponent, { static: false }) olfactoryFormComponent!: OlfactoryFormComponent;
   @ViewChild(TasteOlfactoryFormComponent, { static: false }) tasteOlfactoryFormComponent!: TasteOlfactoryFormComponent;
   @ViewChild(FinalConsiderationFormComponent, { static: false }) finalConsiderationFormComponent!: FinalConsiderationFormComponent;
 
@@ -34,8 +34,7 @@ export class NewEvaluationsPage implements OnInit {
     private validationService: ValidationService,
   ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   goBackToCellar() {
     this.router.navigateByUrl('my-cellar');
@@ -48,4 +47,5 @@ export class NewEvaluationsPage implements OnInit {
     this.validationService.validateFormGroup(this.tasteOlfactoryFormComponent.validationForm);
     this.validationService.validateFormGroup(this.finalConsiderationFormComponent.validationForm);
   }
+  
 }
