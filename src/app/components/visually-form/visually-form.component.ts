@@ -14,19 +14,15 @@ export class VisuallyFormComponent  implements OnInit {
 
   validationForm: FormGroup;
   
-  // constructor() {
-  //   this.validationForm = new FormControl();
-  // }
-
   constructor() {
     this.validationForm = new FormGroup ({
-      limpidezza: new FormControl('', Validators.required),
-      colore: new FormControl('', Validators.required),
-      consistenza: new FormControl('', Validators.required),
-      granaB: new FormControl('', Validators.required),
-      numB: new FormControl('', Validators.required),
-      persistB: new FormControl('', Validators.required),
-      osservazioni: new FormControl('', Validators.required),
+      limpidezza: new FormControl(Validators.required),
+      colore: new FormControl(Validators.required),
+      consistenza: new FormControl(Validators.required),
+      granaB: new FormControl(Validators.required),
+      numB: new FormControl(Validators.required),
+      persistB: new FormControl(Validators.required),
+      osservazioni: new FormControl(Validators.required),
     });
   }
 

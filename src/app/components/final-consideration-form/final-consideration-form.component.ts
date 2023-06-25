@@ -13,10 +13,6 @@ export class FinalConsiderationFormComponent  implements OnInit {
 
   validationForm: FormGroup;
 
-  // constructor() {
-  //   this.validationForm = new FormControl();
-  // }
-
   constructor() {
     this.validationForm = new FormGroup({
       statoEvolutivo: new FormControl('', Validators.required),

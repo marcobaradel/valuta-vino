@@ -8,8 +8,9 @@ export class ValidationService {
 
   constructor() { }
 
-  // Modificare metodo per prendere in input lista di FormGroup e non uno solo
   validateFormGroup(formGroup: FormGroup): boolean {
+    //Validazione non funzionante: sempre validi o invalidi (vedi ts componenti)
+    console.log(formGroup)
     if (formGroup.valid) {
       console.log('Form is valid!');
       // Puoi eseguire le azioni desiderate quando il form è valido

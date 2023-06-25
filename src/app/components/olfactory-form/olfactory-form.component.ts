@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -10,20 +10,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   imports: [IonicModule]
 })
 export class OlfactoryFormComponent  implements OnInit {
+  @Output() intensitaChange: EventEmitter<string> = new EventEmitter<string>();
   
   validationForm: FormGroup;
 
-  // constructor() {
-  //   this.validationForm = new FormControl();
-  // }
-
   constructor() {
     this.validationForm = new FormGroup ({
-      intensita: new FormControl('', Validators.required),
-      complessita: new FormControl('', Validators.required),
-      qualita: new FormControl('', Validators.required),
-      descrizione: new FormControl('', Validators.required),
-      osservazioni: new FormControl('', Validators.required),
+      intensita: new FormControl(Validators.required),
+      complessita: new FormControl(Validators.required),
+      qualita: new FormControl(Validators.required),
+      descrizione: new FormControl(Validators.required),
+      osservazioni: new FormControl(Validators.required),
     });
   }
 

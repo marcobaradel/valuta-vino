@@ -23,6 +23,7 @@ import { ValidationService } from 'src/app/validation.service';
   ],
 })
 export class NewEvaluationsPage implements OnInit {
+
   @ViewChild(OlfactoryFormComponent, { static: false }) olfactoryFormComponent!: OlfactoryFormComponent;
   @ViewChild(VisuallyFormComponent, { static: false }) visuallyFormComponent!: VisuallyFormComponent;
   @ViewChild(TasteOlfactoryFormComponent, { static: false }) tasteOlfactoryFormComponent!: TasteOlfactoryFormComponent;
@@ -42,6 +43,9 @@ export class NewEvaluationsPage implements OnInit {
 
   // Passare a validationService.validateFormGroup tutti i validationForm dei componenti
   submitData() {
+    this.validationService.validateFormGroup(this.visuallyFormComponent.validationForm);
     this.validationService.validateFormGroup(this.olfactoryFormComponent.validationForm);
+    this.validationService.validateFormGroup(this.tasteOlfactoryFormComponent.validationForm);
+    this.validationService.validateFormGroup(this.finalConsiderationFormComponent.validationForm);
   }
 }
