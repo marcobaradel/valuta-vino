@@ -8,6 +8,8 @@ import { URL_JSON_DB } from '../environments/environment'
 export class LoadDataService {
   private users: any;
   private evaluations: any;
+  private regions: any;
+  private countries: any;
 
   constructor(private http: HttpClient) { }
 
@@ -25,6 +27,24 @@ export class LoadDataService {
       this.http.get(URL_JSON_DB.EVALUATIONS).subscribe(async (data: any) => {
         this.evaluations = await data;
         resolve(this.evaluations);
+      })
+    });
+  }
+
+  loadRegions() {
+    return new Promise<any>((resolve) => {
+      this.http.get(URL_JSON_DB.REGIONS).subscribe(async (data: any) => {
+        this.regions = await data;
+        resolve(this.regions);
+      })
+    });
+  }
+
+  loadCountries() {
+    return new Promise<any>((resolve) => {
+      this.http.get(URL_JSON_DB.COUNTRIES).subscribe(async (data: any) => {
+        this.countries = await data;
+        resolve(this.regions);
       })
     });
   }
